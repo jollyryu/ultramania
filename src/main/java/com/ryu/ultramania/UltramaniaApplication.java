@@ -20,7 +20,7 @@ public class UltramaniaApplication implements CommandLineRunner {
 	@Autowired
 	ServiceCategoryRepository serviceCategoryRepository;
 
-
+	@Override
 	public void run(String... args) throws Exception {
 
 		ServiceCategoryEntity serviceCategoryEntity = new ServiceCategoryEntity();
