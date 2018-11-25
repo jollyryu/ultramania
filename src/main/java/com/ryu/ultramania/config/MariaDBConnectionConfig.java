@@ -44,10 +44,10 @@ public class MariaDBConnectionConfig{
         hikariConfig.setPoolName("jpubDBpool");
         hikariConfig.setAutoCommit(TRUE);
 
-        System.out.println("dbUsername " + dbUsername);
-        System.out.println("dbPassword " + dbPassword);
-        System.out.println("dbUrl " + dbUrl);
-        System.out.println("dbClassName " + dbClassName);
+//        System.out.println("dbUsername " + dbUsername);
+//        System.out.println("dbPassword " + dbPassword);
+//        System.out.println("dbUrl " + dbUrl);
+//        System.out.println("dbClassName " + dbClassName);
 
         final HikariDataSource dataSource = new HikariDataSource(hikariConfig);
         return dataSource;

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.userMapper">
+
+    <resultMap id="userResultMap" type="com.ryu.ultramania.model.UserEntity">
+        <result property="id" column="id"/>
+        <result property="userId" column="user_id"/>
+        <result property="userName" column="user_name"/>
+        <result property="userPassword" column="user_password"/>
+        <result property="userEmail" column="user_email"/>
+        <result property="userStatus" column="user_status"/>
+    </resultMap>
+
+
+    <select id="selectUserInfoAll" resultType="hashMap">
+    <![CDATA[
+		SELECT id, user_id, user_name, user_password
+		FROM service_user
+	]]>
+    </select>
+
+    <insert id="addUserInfo" >
+    <![CDATA[
+        insert into service_user(user_id ,user_name, user_password, user_email, user_status)
+        values(#{userId},#{userName}, #{userPassword}, #{userEmail}, #{userStatus})
+     ]]>
+    </insert>
+
+    <select id="findByUserNameLike" parameterType="map" resultType="hashMap">
+    <![CDATA[
+      SELECT
+            id,
+            user_id,
+            user_name,
+            user_password
+      FROM service_user
+      WHERE user_name LIKE '%${userName}%'
+     ]]>
+    </select>
+
+    <select id="findByUserName" parameterType="map" resultMap="userResultMap">
+    <![CDATA[
+      SELECT
+            id,
+            user_id,
+            user_name,
+            user_password
+      FROM service_user
+      WHERE user_name =#{userName}
+      ]]>
+    </select>
+
+    <!--foreach tag-->
+    <select id="foreachUserList" parameterType="java.util.HashMap" resultType="java.util.HashMap">
+    SELECT
+      id,
+     user_id,
+     user_name,
+     user_password
+    FROM service_user
+    WHERE user_id IN
+        <foreach collection="user_list" item="userId" index="index" open="(" close=")" separator=",">
+        #{userId}
+        </foreach>
+    </select>
+</mapper>

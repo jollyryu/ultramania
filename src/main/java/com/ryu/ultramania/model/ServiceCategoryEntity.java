@@ -1,8 +1,11 @@
 package com.ryu.ultramania.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.Date;
 
+@Data
 @Entity
 @Table(name = "service_category")
 public class ServiceCategoryEntity {
@@ -26,71 +29,19 @@ public class ServiceCategoryEntity {
     @Column(name = "category_level")
     private long categoryLevel;
 
+    @Column(name = "created_at")
     private Date createdAt;
 
+    @Column(name = "updated_at")
+    private Date updateAt;
+
+
     @PrePersist
-    public void beforeCreate(){
+    public void beforeCreate() {
         createdAt = new Date();
     }
 
-    public ServiceCategoryEntity(){
-
-    }
-
-    public long getId() {
-        return Id;
-    }
-
-    public void setId(long Id) {
-        this.Id = Id;
-    }
-
-    public String getCategoryCode() {
-        return categoryCode;
-    }
-
-    public void setCategoryCode(String categoryCode) {
-        this.categoryCode = categoryCode;
-    }
-
-    public String getCategoryName() {
-        return categoryName;
-    }
-
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
-    }
-
-    public String getCategoryLabel() {
-        return categoryLabel;
-    }
-
-    public void setCategoryLabel(String categoryLabel) {
-        this.categoryLabel = categoryLabel;
-    }
-
-    public long getCategoryLevel() {
-        return categoryLevel;
-    }
-
-    public void setCategoryLevel(long categoryLevel) {
-        this.categoryLevel = categoryLevel;
-    }
-
-    public String getCategoryParentCode() {
-        return categoryParentCode;
-    }
-
-    public void setCategoryParentCode(String categoryParentCode) {
-        this.categoryParentCode = categoryParentCode;
-    }
-
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
+    public ServiceCategoryEntity() {
     }
 
     @Override

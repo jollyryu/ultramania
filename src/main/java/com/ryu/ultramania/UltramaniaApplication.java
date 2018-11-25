@@ -1,7 +1,10 @@
 package com.ryu.ultramania;
 
+import com.ryu.ultramania.model.FreeBoardEntity;
+import com.ryu.ultramania.model.MemberEntity;
 import com.ryu.ultramania.model.ServiceCategoryEntity;
-import com.ryu.ultramania.repository.ServiceCategoryRepository;
+import com.ryu.ultramania.model.UserEntity;
+import com.ryu.ultramania.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -20,14 +23,50 @@ public class UltramaniaApplication implements CommandLineRunner {
 	@Autowired
 	ServiceCategoryRepository serviceCategoryRepository;
 
+	@Autowired
+	MemberRepository memberRepository;
+
+	@Autowired
+	FreeBoardRepository freeBoardRepository;
+
+	@Autowired
+	UserJpaRepository userJpaRepository;
+
+	@Autowired
+	UserRepository userRepository;
+
 	@Override
 	public void run(String... args) throws Exception {
 
-		ServiceCategoryEntity serviceCategoryEntity = new ServiceCategoryEntity();
+//		UserEntity userEntity = new UserEntity("A00001", "jay.ryu", "jay.ryu@kakaopaycorp.com", "REG", "ppp");
+//		userRepository.adduserInfo(userEntity);
 
-		serviceCategoryEntity = serviceCategoryRepository.findByCategoryCode("A0001");
+		System.out.println(userJpaRepository.findByUserName("jay.ryu"));
 
-		System.out.println(serviceCategoryEntity.getCategoryCode());
+//		ServiceCategoryEntity serviceCategoryEntity = new ServiceCategoryEntity();
+//
+//		serviceCategoryEntity = serviceCategoryRepository.findByCategoryCode("A0001");
+//
+//		System.out.println(serviceCategoryEntity.getCategoryCode());
+
+//		MemberEntity memberEntity = new MemberEntity();
+//		memberEntity.setMemberName("테스트");
+//		memberEntity.setMemberEmail("111@naver.com");
+//		memberEntity.setMemberPassword("11");
+//
+//		System.out.println(memberEntity.toString());
+//		memberRepository.registMember(memberEntity);
+
+
+
+//			System.out.println("frebboard run");
+//			FreeBoardEntity freeBoardVO = new FreeBoardEntity();
+//			freeBoardVO.setUserName("홍길동");
+//			freeBoardVO.setCategory("101");
+//			freeBoardVO.setContent("자유게시판 첫 글");
+//			freeBoardVO.setTitle("안녕");
+//
+//			freeBoardRepository.registBoard(freeBoardVO);
 
 	}
 

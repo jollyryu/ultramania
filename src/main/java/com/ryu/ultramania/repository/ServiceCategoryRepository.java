@@ -21,7 +21,7 @@ public class ServiceCategoryRepository  {
     public ServiceCategoryEntity findByCategoryCode(String categoryCode){
         Map<String,Object> params = new HashMap();
         params.put("categoryCode", categoryCode);
-        System.out.println("query 실행...");
+//        System.out.println("query 실행...");
         return sqlSessionTemplate.selectOne(MAPPER_NAME_SPACE + "findByCategoryCode", params);
 
     }
