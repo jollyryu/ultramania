@@ -2,11 +2,14 @@ package com.ryu.ultramania.model;
 
 import com.sun.javafx.beans.IDProperty;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NonNull;
+import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Date;
-
 
 @Data
 @Entity
@@ -18,12 +21,15 @@ public class UserEntity implements Serializable{
     private Long id;
 
     @Column(name = "user_id")
+    @NotNull(message = "아이디는 null 일 수 없습니다.")
     private String userId;
 
     @Column(name = "user_name")
+    @NotNull(message = "이름은 null 일 수 없습니다.")
     private String userName;
 
     @Column(name = "user_email")
+    @NotNull(message = "email은 null 일 수 없습니다.")
     private String userEmail;
 
     @Column(name = "user_password")

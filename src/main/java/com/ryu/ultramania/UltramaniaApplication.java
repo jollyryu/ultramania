@@ -1,5 +1,6 @@
 package com.ryu.ultramania;
 
+import com.ryu.ultramania.exception.UserNotFoundException;
 import com.ryu.ultramania.model.FreeBoardEntity;
 import com.ryu.ultramania.model.MemberEntity;
 import com.ryu.ultramania.model.ServiceCategoryEntity;
@@ -40,6 +41,10 @@ public class UltramaniaApplication implements CommandLineRunner {
 		userRepository.adduserInfo(userEntity);
 
 		System.out.println(userJpaRepository.findByUserName("jay.ryu"));
+
+		if(userJpaRepository.findByUserName("jay.ryu") == null){
+			throw new UserNotFoundException("user not found");
+		}
 
 //		ServiceCategoryEntity serviceCategoryEntity = new ServiceCategoryEntity();
 //

@@ -39,6 +39,10 @@ dependencies {
 	compile group: 'com.zaxxer', name: 'HikariCP', version: '2.5.1'
 	//log
 	compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+
+	//doc
+	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.4.0'
+	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.4.0'
 //	runtimeOnly('mysql:mysql-connector-java')
 	//test
 	compileOnly 'org.projectlombok:lombok:1.18.2'
