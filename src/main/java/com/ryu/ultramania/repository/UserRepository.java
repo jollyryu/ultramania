@@ -22,8 +22,14 @@ public class UserRepository {
     }
 
     public void adduserInfo(UserEntity userEntity){
-        sqlSessionTemplate.insert(MAPPER_NAME_SPACE+ "addUserInfo", userEntity);
+
+        if(userEntity.getUserName().equals("jay.ryu")) {
+            throw new ArithmeticException("중복된 사용자 입력을 제한합니다.");
+        }else {
+            sqlSessionTemplate.insert(MAPPER_NAME_SPACE + "addUserInfo", userEntity);
+        }
     }
+
 
     public List findByUserNameLike(String userName){
         Map<String,Object> params = new HashMap();
