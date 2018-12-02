@@ -23,8 +23,6 @@ public class UltramaniaApplication implements CommandLineRunner {
 	@Autowired
 	ServiceCategoryRepository serviceCategoryRepository;
 
-	@Autowired
-	MemberRepository memberRepository;
 
 	@Autowired
 	FreeBoardRepository freeBoardRepository;
@@ -38,8 +36,8 @@ public class UltramaniaApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-//		UserEntity userEntity = new UserEntity("A00001", "jay.ryu", "jay.ryu@kakaopaycorp.com", "REG", "ppp");
-//		userRepository.adduserInfo(userEntity);
+		UserEntity userEntity = new UserEntity("A00001", "ryu", "jay.ryu@kakaopaycorp.com", "REG", "ppp");
+		userRepository.adduserInfo(userEntity);
 
 		System.out.println(userJpaRepository.findByUserName("jay.ryu"));
 

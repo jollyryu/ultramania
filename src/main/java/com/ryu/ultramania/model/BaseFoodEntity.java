@@ -7,7 +7,6 @@ import javax.persistence.Entity;
 import java.util.ArrayList;
 
 @Data
-@Entity
 public class BaseFoodEntity {
 
     private String name;
