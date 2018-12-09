@@ -20,31 +20,31 @@ public class UltramaniaApplication implements CommandLineRunner {
 
 	}
 
-
-	@Autowired
-	ServiceCategoryRepository serviceCategoryRepository;
-
-
-	@Autowired
-	FreeBoardRepository freeBoardRepository;
-
-	@Autowired
-	UserJpaRepository userJpaRepository;
-
-	@Autowired
-	UserRepository userRepository;
+//
+//	@Autowired
+//	ServiceCategoryRepository serviceCategoryRepository;
+//
+//
+//	@Autowired
+//	FreeBoardRepository freeBoardRepository;
+//
+//	@Autowired
+//	UserJpaRepository userJpaRepository;
+//
+//	@Autowired
+//	UserRepository userRepository;
 
 	@Override
 	public void run(String... args) throws Exception {
 
-		UserEntity userEntity = new UserEntity("A00001", "ryu", "jay.ryu@kakaopaycorp.com", "REG", "ppp");
-		userRepository.adduserInfo(userEntity);
-
-		System.out.println(userJpaRepository.findByUserName("jay.ryu"));
-
-		if(userJpaRepository.findByUserName("jay.ryu") == null){
-			throw new UserNotFoundException("user not found");
-		}
+//		UserEntity userEntity = new UserEntity("A00001", "ryu", "jay.ryu@kakaopaycorp.com", "REG", "ppp");
+//		userRepository.adduserInfo(userEntity);
+//
+//		System.out.println(userJpaRepository.findByUserName("jay.ryu"));
+//
+//		if(userJpaRepository.findByUserName("jay.ryu") == null){
+//			throw new UserNotFoundException("user not found");
+//		}
 
 //		ServiceCategoryEntity serviceCategoryEntity = new ServiceCategoryEntity();
 //

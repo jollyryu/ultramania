@@ -1,5 +1,6 @@
 package com.ryu.ultramania.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.sun.javafx.beans.IDProperty;
 import lombok.Data;
 import lombok.Getter;
@@ -18,18 +19,18 @@ public class UserEntity implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private int id;
 
     @Column(name = "user_id")
-    @NotNull(message = "아이디는 null 일 수 없습니다.")
+//    @NotNull(message = "아이디는 null 일 수 없습니다.")
     private String userId;
 
     @Column(name = "user_name")
-    @NotNull(message = "이름은 null 일 수 없습니다.")
+//    @NotNull(message = "이름은 null 일 수 없습니다.")
     private String userName;
 
     @Column(name = "user_email")
-    @NotNull(message = "email은 null 일 수 없습니다.")
+//    @NotNull(message = "email은 null 일 수 없습니다.")
     private String userEmail;
 
     @Column(name = "user_password")
@@ -39,9 +40,11 @@ public class UserEntity implements Serializable{
     private String userStatus;
 
     @Column(name = "created_at")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "Asia/Seoul")
     private Date createdAt;
 
     @Column(name = "updated_at")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "Asia/Seoul")
     private Date updateAt;
 
     @PrePersist
@@ -51,6 +54,7 @@ public class UserEntity implements Serializable{
 
     public UserEntity() {
     }
+
 
     public UserEntity(String userId, String userName, String userEmail, String userStatus, String userPassword) {
         this.userId = userId;
