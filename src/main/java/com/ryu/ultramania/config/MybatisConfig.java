@@ -13,7 +13,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 @Configuration
 @Import(MariaDBConnectionConfig.class)
 @ComponentScan(basePackages = {"com.ryu.ultramania.repository"})
-public class MyBatisConfig{
+public class MybatisConfig {
 
     @Autowired
     private MariaDBConnectionConfig mariaDBConfig;

@@ -7,6 +7,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.annotation.TransactionManagementConfigurer;
 
 import javax.sql.DataSource;
 
@@ -14,8 +18,9 @@ import static java.lang.Boolean.TRUE;
 
 
 @Configuration
+@EnableTransactionManagement
 @PropertySource("application.properties")
-public class MariaDBConnectionConfig{
+public class MariaDBConnectionConfig implements TransactionManagementConfigurer {
     @Value("${spring.datasource.url}")
     private String dbUrl;
 
@@ -52,5 +57,15 @@ public class MariaDBConnectionConfig{
         final HikariDataSource dataSource = new HikariDataSource(hikariConfig);
         return dataSource;
 
+    }
+
+    @Bean
+    public DataSourceTransactionManager transactionManager(){
+        return new DataSourceTransactionManager(dataSource());
+    }
+
+    @Override
+    public PlatformTransactionManager annotationDrivenTransactionManager(){
+        return transactionManager();
     }
 }
