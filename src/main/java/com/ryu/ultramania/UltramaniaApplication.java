@@ -37,6 +37,7 @@ public class UltramaniaApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
+		
 //		UserEntity userEntity = new UserEntity("A00001", "ryu", "jay.ryu@kakaopaycorp.com", "REG", "ppp");
 //		userRepository.adduserInfo(userEntity);
 //
