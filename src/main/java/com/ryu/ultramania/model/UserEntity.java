@@ -1,14 +1,9 @@
 package com.ryu.ultramania.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.sun.javafx.beans.IDProperty;
 import lombok.Data;
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.Setter;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Date;
 

@@ -14,7 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class UltramaniaApplication implements CommandLineRunner {
 
-	
+
 	public static void main(String[] args) {
 		SpringApplication.run(UltramaniaApplication.class, args);
 		System.out.println("Application Start!!!");
