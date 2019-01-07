@@ -23,11 +23,13 @@ public class UltramaniaApplication implements CommandLineRunner {
 
 	public void run(String... args) throws Exception {
 
-		ServiceCategoryEntity serviceCategoryEntity = new ServiceCategoryEntity();
+//		ServiceCategoryEntity serviceCategoryEntity = new ServiceCategoryEntity();
+//
+//		serviceCategoryEntity = serviceCategoryRepository.findByCategoryCode("A0001");
 
-		serviceCategoryEntity = serviceCategoryRepository.findByCategoryCode("A0001");
+//		System.out.println(serviceCategoryEntity.getCategoryCode());
 
-		System.out.println(serviceCategoryEntity.getCategoryCode());
+
 
 	}
 
