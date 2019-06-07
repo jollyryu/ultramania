@@ -50,4 +50,7 @@ dependencies {
 	//junit도 포함함
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 //	testImplementation('org.springframework.security:spring-security-test')
+
+//	mornitoring
+	compile group: 'org.springframework.boot', name: 'spirng-boot-strater-actuator', version: '1.5.8.RELEASE'
 }
