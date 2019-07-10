@@ -48,7 +48,7 @@ public class MemberController {
 
 		return "redirect:/welcome";
 	}
-	//주석
+	//주//
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public ModelAndView login(Model model, String error, String logout) {
