@@ -10,7 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-
+//테스트
 @RestController
 public class ServiceController {
 
