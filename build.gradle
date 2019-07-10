@@ -28,7 +28,7 @@ dependencies {
 //	implementation('org.springframework.boot:spring-boot-starter-actuator')
 //	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 //	implementation('org.springframework.boot:spring-boot-starter-security')
-//	compile('org.projectlombok:lombok')
+	compile('org.projectlombok:lombok')
 	compile "org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}"
 	//web
 	compile('org.springframework.boot:spring-boot-starter-web')
@@ -53,4 +53,31 @@ dependencies {
 
 //	mornitoring
 	compile group: 'org.springframework.boot', name: 'spirng-boot-strater-actuator', version: '1.5.8.RELEASE'
+
+//	cache
+	compile group: 'org.ehcache', name: 'jcache', version: '1.0.1'
+	compile group: 'javax.cache', name: 'cache-api', version: '1.0.0'
+
+//	ehcache
+	compile group: 'net.sf.chcache', name: 'ehcache', version: '2.10.4'
+
+
+	compile "org.springframework.boot:spring-boot-starter-security"
+	testCompile('org.springframework.security:spring-security-test')
+
+	compile "org.springframework.boot:spring-boot-stater-thymeleaf"
+	compile group: 'org.webjars', name: 'webjars-locator', version: '0.32'
+	compile group: 'org.webjars', name: 'startbootstrap-sb-admin-2', version: '3.3.7+1'
+	compile group: 'org.webjars', name: 'metisMenu', version: '1.1.2'
+	compile group: 'org.webjars', name: 'font-awesome', version: '4.7.0'
+	compile group: 'net.sourceforge.nekohtml', name: 'nekohtml', version: '1.9.22'
+	compile group: 'org.datanucleus', name: 'javax.jdo', version: '3.2.0-m6'
+
+
+	compile 'org.webjars:jquery:3.1.0'
+	compile 'org.webjars:bootstrap:3.3.1'
+	compile 'org.webjars:materializecss:0.96.0'
+
+	compile group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-springsecurity4', version: '2.1.2.RELEASE'
+
 }
