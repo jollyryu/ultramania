@@ -23,7 +23,7 @@ repositories {
 	mavenCentral()
 }
 
-test { useJUnitPlatform() }
+//test { useJUnitPlatform() }
 
 
 dependencies {
