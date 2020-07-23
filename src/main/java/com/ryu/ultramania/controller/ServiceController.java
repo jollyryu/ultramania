@@ -7,11 +7,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+<<<<<<< HEAD
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 //테스트//
 @RestController
+=======
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+//주석테스트
+@Controller
+>>>>>>> 455bfe1d3dce02dec8cf3a6fa74045fbf9a23397
 public class ServiceController {
 
 
