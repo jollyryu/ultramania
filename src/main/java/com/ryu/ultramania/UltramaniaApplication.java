@@ -1,7 +1,7 @@
 package com.ryu.ultramania;
 
-import com.ryu.ultramania.model.ServiceCategoryEntity;
-import com.ryu.ultramania.repository.ServiceCategoryRepository;
+//import com.ryu.ultramania.model.ServiceCategoryEntity;
+//import com.ryu.ultramania.repository.ServiceCategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -17,8 +17,8 @@ public class UltramaniaApplication implements CommandLineRunner {
 	}
 
 
-	@Autowired
-	ServiceCategoryRepository serviceCategoryRepository;
+//	@Autowired
+//	ServiceCategoryRepository serviceCategoryRepository;
 
 
 	public void run(String... args) throws Exception {

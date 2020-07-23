@@ -31,13 +31,13 @@ dependencies {
 //	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 //	implementation('org.springframework.boot:spring-boot-starter-security')
 //	compile('org.projectlombok:lombok')
-	compile "org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}"
+//	compile "org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}"
 	//web
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	//DB
-	compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '1.5.7'
-	compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.1.1')
+//	compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '1.5.7'
+//	compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.1.1')
 	compile group: 'com.zaxxer', name: 'HikariCP', version: '2.5.1'
 	//log
 	compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
